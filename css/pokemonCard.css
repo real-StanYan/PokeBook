@@ -1,0 +1,36 @@
+.pokemonCard {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1vw;
+  border: 5px solid #000;
+  border-radius: 10px;
+}
+.pokemonCard .pokemonCard_image {
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.pokemonCard .pokemonCard_id {
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.pokemonCard .pokemonCard_name {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.pokemonCard .pokemonCard_types {
+  display: flex;
+  justify-content: center;
+}
+.pokemonCard .pokemonCard_types .pokemonCard_type {
+  padding: 2px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.pokemonCard .pokemonCard_types .pokemonCard_type:last-child {
+  margin-right: 0;
+}

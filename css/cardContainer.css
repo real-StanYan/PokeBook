@@ -1,0 +1,17 @@
+.card_main_container .card_container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  padding: 4vw;
+}
+.card_main_container .page_ctrl_btns {
+  display: flex;
+  justify-content: center;
+}
+.card_main_container .page_ctrl_btns div {
+  padding: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}

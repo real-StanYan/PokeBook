@@ -1,0 +1,17 @@
+#navbar {
+  width: 100vw;
+  display: flex;
+  padding: 1vw;
+  background-color: #ff3d00;
+  color: #fefefe;
+}
+#navbar #navbar-logo {
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+#navbar #navbar-logo p {
+  font-size: 2vw;
+  font-weight: 600;
+  margin-left: 0.4vw;
+}
