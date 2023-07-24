@@ -1,36 +1,52 @@
+@font-face {
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tektur/v1/XoHN2YHtS7q969kXCjzlV0aSkS_o8OacmTe0TYlYFot8TrwcVYtO.ttf) format('truetype');
+}
 .pokemonCard {
   width: 15vw;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1vw;
-  border: 5px solid #000;
+  border: 3px solid #000;
   border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .pokemonCard .pokemonCard_image {
   width: auto;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
-.pokemonCard .pokemonCard_id {
+.pokemonCard .card_content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pokemonCard .card_content .pokemonCard_id {
   text-align: center;
   font-size: 1.5vw;
   font-weight: 600;
   margin-bottom: 5px;
+  color: #f8f8f8;
 }
-.pokemonCard .pokemonCard_name {
+.pokemonCard .card_content .pokemonCard_name {
   text-align: center;
+  font-family: "Tektur", cursive;
+  font-size: 1.5vw;
   margin-bottom: 5px;
+  color: #f8f8f8;
 }
-.pokemonCard .pokemonCard_types {
+.pokemonCard .card_content .pokemonCard_types {
   display: flex;
   justify-content: center;
+  margin-bottom: 1vw;
 }
-.pokemonCard .pokemonCard_types .pokemonCard_type {
-  padding: 2px;
-  border: 1px solid #000;
-  border-radius: 10px;
+.pokemonCard .card_content .pokemonCard_types .pokemonCard_type {
+  padding: 5px;
+  border-radius: 5px;
   margin-right: 5px;
+  color: #f8f8f8;
 }
-.pokemonCard .pokemonCard_types .pokemonCard_type:last-child {
+.pokemonCard .card_content .pokemonCard_types .pokemonCard_type:last-child {
   margin-right: 0;
 }

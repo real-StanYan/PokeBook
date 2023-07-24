@@ -18,3 +18,9 @@ type pokemonCardData = {
     back_default: string;
   };
 };
+
+type typeColor = {
+  bgc: string;
+  btc: string;
+  bbc: string;
+};
