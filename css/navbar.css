@@ -3,6 +3,7 @@
   height: 5vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1vw;
   background-color: #ff3d00;
   color: #fefefe;
@@ -26,4 +27,22 @@
   font-size: 1vw;
   border: 3px solid #000;
   border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  #navbar {
+    height: 10vw;
+  }
+  #navbar #navbar-logo img {
+    width: 6vw;
+    height: 6vw;
+  }
+  #navbar #navbar-logo p {
+    font-size: 3vw;
+  }
+  #navbar #navbar_search {
+    width: 20vw;
+    height: 80%;
+    font-size: 2vw;
+    border: 2px solid #000;
+  }
 }
