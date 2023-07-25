@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import { useRouter } from "next/navigation";
 import typeColor from "@/util/typeColor";
 
-import "@/css/PokemonCard.css";
+import "@/css/pokemonCard.css";
 
 const PokemonCard: FC<pokemonCardData> = ({ ...pokemon }) => {
   const router = useRouter();
