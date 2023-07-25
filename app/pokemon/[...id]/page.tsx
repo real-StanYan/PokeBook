@@ -7,7 +7,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 import "@/css/pokemonDetail.css";
 
-const page = ({ params }: { params: { id: string } }) => {
+const Page = ({ params }: { params: { id: string } }) => {
   const router = useRouter();
   const { id } = params;
   const [pokemon, setPokemon] = useState<pokemonData | undefined>();
@@ -239,4 +239,4 @@ const page = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default page;
+export default Page;

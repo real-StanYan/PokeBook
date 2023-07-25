@@ -1,11 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import PokemonCard from "@/components/PokemonCard";
 
 import "@/css/cardContainer.css";
 
-const page = () => {
+const Page = () => {
   const [pokeApi, setPokeApi] = useState<string>(
     `https://pokeapi.co/api/v2/pokemon/`
   );
@@ -17,14 +17,14 @@ const page = () => {
     pokemonCardData[] | undefined
   >([]);
 
-  const fetchAllPokemon = async () => {
+  const fetchAllPokemon = useCallback(async () => {
     const all_pokes_res = await fetch(pokeApi);
     const all_pokes_data = await all_pokes_res.json();
     setInitPokemon(all_pokes_data.results);
     setPrevious(all_pokes_data.previous);
     setNext(all_pokes_data.next);
     setCount(all_pokes_data.count);
-  };
+  }, [pokeApi]);
 
   const fetchPokemon = async (url: string) => {
     const poke_res = await fetch(url);
@@ -40,7 +40,7 @@ const page = () => {
 
   useEffect(() => {
     fetchAllPokemon();
-  }, [pokeApi]);
+  }, [fetchAllPokemon]);
 
   useEffect(() => {
     initPokemon.forEach((poke) => {
@@ -83,4 +83,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
