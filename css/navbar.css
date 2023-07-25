@@ -1,5 +1,6 @@
 #navbar {
   width: 100vw;
+  height: 5vw;
   display: flex;
   padding: 1vw;
   background-color: #ff3d00;
@@ -9,6 +10,7 @@
   justify-self: flex-start;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 #navbar #navbar-logo p {
   font-size: 2vw;

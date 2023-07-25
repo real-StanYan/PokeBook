@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'Tektur';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tektur/v1/XoHN2YHtS7q969kXCjzlV0aSkS_o8OacmTe0TYlYFot8TrwcVYtO.ttf) format('truetype');
+}
+.pokemonDetail_main_container {
+  font-family: "Tektur", cursive;
+}
+.pokemonDetail_main_container .basic_infor_container {
+  width: 100vw;
+  height: calc(100vh - 5vw);
+  display: flex;
+  flex-direction: column;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor {
+  width: 100%;
+  height: 45%;
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: space-around;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .pokemon_image {
+  flex: 1 1 0%;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #000;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch .default_switch {
+  border-right: 3px solid #000;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch .default_switch,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch .shiny_switch {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch .default_switch:hover,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .default_shiny_switch .shiny_switch:hover {
+  background-color: #000;
+  color: #fefefe;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  border-top: 3px solid #000;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch .front_switch {
+  border-right: 3px solid #000;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch .front_switch,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch .back_switch {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch .front_switch:hover,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .front_back_switch .back_switch:hover {
+  background-color: #000;
+  color: #fefefe;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_images .active {
+  background-color: #000;
+  color: #fefefe;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2vw;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_id,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_name,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_types,
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_weight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_types .infor_content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1vw;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_types .infor_content .pokemon_infor_type {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+  color: #f8f8f8;
+}
+.pokemonDetail_main_container .basic_infor_container .basic_infor .pokemon_infor .pokemon_infor_types .infor_content .pokemon_infor_type:last-child {
+  margin-right: 0;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain {
+  display: flex;
+  height: 50%;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain .evolution_chain_pokemon {
+  position: relative;
+  flex: 1 1 0%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain .evolution_chain_pokemon .evolution_chain_pokemon_image {
+  width: 60%;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain .evolution_chain_pokemon .evolution_chain_pokemon_name {
+  font-size: 1.5vw;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain .evolution_chain_pokemon .evolution_arrow {
+  position: absolute;
+  right: -2vw;
+  font-size: 5vw;
+}
+.pokemonDetail_main_container .basic_infor_container .evolution_chain .evolution_chain_pokemon .evolution_arrow p {
+  font-size: 1.5vw;
+  text-align: center;
+}
