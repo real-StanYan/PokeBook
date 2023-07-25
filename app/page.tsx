@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import { BiSolidArrowToBottom } from "react-icons/bi";
+import Skeleton from "react-loading-skeleton";
 
 import PokemonCard from "@/components/PokemonCard";
 
@@ -13,6 +15,7 @@ const Page = () => {
   const [next, setNext] = useState<string | undefined>();
   const [count, setCount] = useState<number>(0);
   const [initPokemon, setInitPokemon] = useState<InitPokemon[]>([]);
+  const [showAll, setShowAll] = useState<boolean>(false);
   const [pokemonCardData, setPokemonCardData] = useState<
     pokemonCardData[] | undefined
   >([]);
@@ -53,31 +56,45 @@ const Page = () => {
   return (
     <div className="card_main_container">
       <div className="card_container">
-        {pokemonCardData &&
+        {!pokemonCardData ? (
+          <Skeleton count={20} />
+        ) : (
           [...pokemonCardData]
             .sort((a, b) => a.id - b.id)
             .map((pokemon) => {
               return <PokemonCard key={pokemon.id} {...pokemon} />;
-            })}
+            })
+        )}
       </div>
 
       <div className="page_ctrl_btns">
         <div
+          style={{ display: showAll ? "none" : "flex" }}
           onClick={() => {
             setPokeApi(
               `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=${count}`
             );
+            setShowAll(true);
           }}
         >
           Show all
         </div>
         <div
+          style={{ display: showAll ? "none" : "flex" }}
           onClick={() => {
             setPokeApi(next ? next : pokeApi);
           }}
         >
           More
         </div>
+      </div>
+
+      <div
+        className="toBottom_btn"
+        style={{ display: showAll ? "flex" : "none" }}
+        onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+      >
+        <BiSolidArrowToBottom />
       </div>
     </div>
   );

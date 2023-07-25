@@ -43,6 +43,7 @@ const Page = ({ params }: { params: { id: string } }) => {
             front: data.sprites.front_shiny,
             back: data.sprites.back_shiny,
           },
+          more: data.sprites.versions,
         },
       };
 

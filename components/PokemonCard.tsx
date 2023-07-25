@@ -11,6 +11,9 @@ const PokemonCard: FC<pokemonCardData> = ({ ...pokemon }) => {
   const [img, setImg] = useState<string>(pokemon.image.front_default);
 
   const handlemouseEnter = () => {
+    if (!pokemon.image.back_default) {
+      return;
+    }
     setImg(pokemon.image.back_default);
   };
 
@@ -26,7 +29,7 @@ const PokemonCard: FC<pokemonCardData> = ({ ...pokemon }) => {
       }}
     >
       <img
-        src={img}
+        src={img ? img : "/unknow_icon.jpeg"}
         alt={`${pokemon.id}_${pokemon.name}`}
         className="pokemonCard_image"
         onMouseEnter={handlemouseEnter}

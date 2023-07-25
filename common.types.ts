@@ -31,7 +31,6 @@ type pokemonData = {
   weight: number;
   evolution_chain: string;
   abilities: [];
-
   types: [
     {
       type: {
@@ -48,6 +47,13 @@ type pokemonData = {
       front: string;
       back: string;
     };
+    more: [
+      string: {
+        string: {
+          string: string;
+        };
+      },
+    ];
   };
 };
 
