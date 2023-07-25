@@ -147,3 +147,29 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .basic_infor {
+    .pokemon_infor {
+      font-size: 4vw !important;
+      .pokemon_infor_types {
+        .infor_content {
+          display: flex;
+          width: 20vw;
+          font-size: 2vw;
+          justify-content: center;
+          margin-bottom: 1vw;
+          .pokemon_infor_type {
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 5px;
+            color: #f8f8f8;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
